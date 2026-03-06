@@ -1,0 +1,347 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+body{
+    background-color: rgb(230, 242, 230);
+    /* font-family: "Poppins", sans-serif; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading{
+    color: brown;
+}
+.heading span{
+    color: green;
+}
+.box{
+    min-height: 74vh;
+    width: 50%;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding: 10px;
+    padding: 0 20px;
+}
+
+.error{
+    position: absolute;
+    color: red;
+    display: none;
+}
+
+.showerror .error{
+display: block;
+}
+
+.Today h1{
+    font-size: 64px;
+}
+.Today h2 i{
+    color: gold;
+}
+
+.Today i{
+    display: inline-block;
+    animation: rotatesun 6s linear infinite;
+    transition: 0.3s;
+}
+
+
+
+@keyframes rotatesun{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* .Today i:hover{
+    animation: rotateSun 2s linear infinite;
+} */
+
+
+.barbg{
+    background-color: rgb(216, 244, 216);
+    border-radius: 10px;
+    padding: 2px;
+}
+.progressbar p{
+    font-size:xx-small;
+}
+progress{
+    width: 98%;
+    height: 20px;
+}
+
+/* progress::-webkit-progress-bar {
+    background-color: #d8f4d8;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: green;
+    border-radius: 10px;
+} */
+
+.proges{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 10%;
+    background-color: darkgreen;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: width 0.25s ease-in-out;
+
+}
+.proges span{
+    font-size: x-small;
+    color: white;
+    padding-left: 10px;
+    min-width: max-content;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;  
+    margin-top: 9px;
+}
+.opt1{
+    display: flex;
+    align-items: center;
+    min-height: 3.72rem;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 8px;
+}
+
+.input_area{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.gol{
+    height: 0.82rem;
+    /* background-color: green; */
+    width: 0.82rem;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(97,72,28,0.3);
+    box-sizing: border-box;
+}
+
+.completed .gol{
+    background-image: url('img/tick.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #48A300;
+    border-color: #48A300;;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+.completed .txt{
+    text-decoration: line-through;
+    color: green;
+}
+
+.txt{
+    accent-color: grey;
+    width: 80%;
+    padding-left: 5px;
+}
+
+
+.txt{
+    flex: 1;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    color: black;
+}
+
+.txt::placeholder{
+    color: grey;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foot h5{
+    font-size: xx-small;
+}
+.foot p{
+    font-size: xx-small;
+}
+
+@media (min-width: 200px) and (max-width: 415px) {
+  input {
+    width: 100px;
+  }
+}
+@media (max-width:556px) {
+    .Today h2{
+        font-size: 16px;
+    }
+    h1{
+       font-size: 16px;
+    }
+    .box{
+    width: 80%;
+    height: 30%;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding: 5px;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+.options{
+    justify-content: space-around;
+    height: 330px;  
+}
+.box{
+    min-height: 65vh;
+}
+.barbg{
+    padding-left: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.container{
+    justify-content: space-between;
+    padding-top: 70px;
+}
+.foot{
+    padding-top: 15px;
+    align-items: center;
+}
+.foot h5{
+    font-size: xx-small;
+}
+.foot p{
+    font-size: xx-small;
+}
+}
