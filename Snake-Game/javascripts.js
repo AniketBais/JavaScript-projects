@@ -11,7 +11,7 @@ const highScoreElement = document.querySelector("#high-score")
 const scoreElement = document.querySelector("#score")
 const timeElement = document.querySelector("#time")
 
-let highScore = localStorage.getItem("highScore") || 0
+let highScore = Number(localStorage.getItem("highScore")) || 0
 let score = 0
 let time = `00-00`
 let timerIntervalId = null;
@@ -132,6 +132,7 @@ If none match → false*/
         // Snake Bit Himself
         if(hitSelf){
             clearInterval(intervelId)
+            clearInterval(timerIntervalId)
             modal.style.display = "flex"
             startGameModal.style.display = "none" 
             gameOverModal.style.display = "none" 
@@ -151,6 +152,7 @@ If none match → false*/
         if(score>highScore){
             highScore = score
             localStorage.setItem("highScore",highScore.toString())
+            highScoreElement.innerText = highScore
         }
 
     } else{
@@ -159,7 +161,7 @@ If none match → false*/
     }
 
 
-    snake.forEach(blockSegment=>{
+    
         //  console.log(blockSegment)
         // divBlockArray[`${blockSegment.x}-${blockSegment.y}`]
         // blockSegment is one part of the snake like {x:1, y:3}
@@ -174,8 +176,7 @@ If none match → false*/
                 block.classList.add("fill")
             }
         })
-    })
-}
+    }
 // intervelId = setInterval(()=>{
 // render()
 // },500)
@@ -227,6 +228,19 @@ function restartGame(){
     time = `0-0`
     scoreElement.innerText = score
     timeElement.innerText = "00:00"
+    // restart timer
+    let seconds = 0
+
+    timerIntervalId = setInterval(()=>{
+        seconds++
+
+        const min = String(Math.floor(seconds / 60)).padStart(2,"0")
+        const sec = String(seconds % 60).padStart(2,"0")
+
+        timeElement.innerText = `${min}:${sec}`
+    },1000)
+
+
 }
 
 
