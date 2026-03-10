@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* make website consistant 👇*/
+:root{     
+    /* Background Colors*/
+    --bg-primary-color: #0c0c0c;
+    --bg-fill-color: #fdfdfc;
+    /* Food Color*/
+    --bg-food-color : red;
+    /* Text Colors*/
+    --text-primary-color: #f0f0f0; 
+    /* spacing variable*/
+    --space-xs:4px;
+    --space--sm:8px;
+    --space--m:12px;
+    --space--md:16px;
+    --space--lg:32px;
+    --space--xl:32px;
+    --space--2xl:40px;
+    --space--3xl:48px;
+    /* Border colors*/
+    --border-primary-color: #333333;
+    /* Border radius*/
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-2xl: 24px;
+}
+
+.btn{
+    padding: var(--space--sm) var(--space--md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+section{
+    padding: var(--space--2xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color:rgb(114, 80, 36);
+    gap: var(--space--lg)
+}
+main,section{
+    width: 100%;
+    height: 100%;
+}
+section .infos{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    padding: var(--space--sm) var(--space--md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1; /* take full space of your parent have, here it is section*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(30px,1fr));/*one column width is 30px fixed
+    repeat() is a function that repeats column or row sizes multiple times. */
+    grid-template-rows: repeat(auto-fill,minmax(30px,1fr));
+    /* minmax(30px,1fr) means each column is at least 30px wide but can expand to share remaining space equally */
+    /* Means:
+            Minimum width = 30px
+            Maximum width = share remaining space equally
+            So blocks never go below 30px, but they expand to fill empty space. */
+    background-color: aliceblue;
+}
+
+.block{
+    border: 1px solid var(--border-primary-color);
+}
+
+.fill{
+    /* background-color: var(--bg-fill-color); */
+    background-color: #0a7f3f;
+}
+
+.food{
+    position: relative;
+    background: transparent;
+}
+
+/* apple body */
+.food::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: red;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+}
+
+/* leaf */
+.food::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    background: green;
+    border-radius: 50%;
+    top: 5px;
+    left: 16px;
+    transform: rotate(-30deg);
+}
+
+/*snake head start*/
+/* Snake body */
+.fill{
+    background: linear-gradient(135deg, #7ed957, #1f7a1f);
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Snake head */
+.snake-head{
+    position: relative;
+    background: linear-gradient(135deg, #5ecf3b, #145a14);
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+/* Snake eyes */
+.snake-head::before,
+.snake-head::after{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    top: 8px;
+}
+
+/* left eye */
+.snake-head::before{
+    left: 6px;
+}
+
+/* right eye */
+.snake-head::after{
+    right: 6px;
+}
+/*snake head end*/
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: rgba(36, 35, 35, 0.822);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .start-game, .modal .game-over, .modal .hit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space--lg);
+}
+
+.modal .game-over{
+    display: none;
+}
+.modal .hit{
+    display: none;
+}
