@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="left">FlowBoard</div>
+            <div class="right"><button id="toggle-modal">Add New Task</button></div>
+        </nav>
+        <section class="board">
+
+
+            <div id="todo" class="task-column">
+                <div class="heading">
+                    <div class="left">To Do</div>
+                    <div class="right">Count</div>
+                </div>
+
+                <!-- <div class="task" draggable="true">
+                    <h2>Task 1</h2>
+                    <p>Description for Task 1</p>
+                    <button>Delete</button>
+                </div> -->
+            </div>
+
+
+            <div id="progress" class="task-column">
+                <div class="heading">
+                    <div class="left">In Progess</div>
+                    <div class="right">Count</div>
+                </div>
+            </div>
+
+
+            <div id="done" class="task-column">
+                <div class="heading">
+                    <div class="left">Done</div>
+                    <div class="right">Count</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="modal add-new-task ">
+        <div class="bg"></div>
+        <div class="center">
+            <input type="text" placeholder="Task Title" id="task-title-input">
+            <textarea name="" placeholder="Task Description" id="task-desc-input"></textarea>
+            <button class="add-task-btn" id="add-new-task">Add Task</button>
+        </div>
+    </div>
+</body>
+</html>
