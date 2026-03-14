@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password-area" id="copy">
+            <input type="text" readonly id="password" >
+            <i class="fa-regular fa-copy" title="copy to clipboard" id="copy-btn"></i>
+        </div>
+        <div class="main">
+            <div class="range-option">
+                <label for="length">Password Range</label>
+                <input type="range" min="6" max="26" value="12" id="length">
+                <span id="length-value">12</span>
+            </div>
+            <!--UpperCase-->
+            <div class="options">
+                <label for="uppercase">Include Uppercase</label>
+                <input type="checkbox" id="uppercase" >
+            </div>
+            <!--LowerCase-->
+            <div class="options">
+                <label for="lowercase">Include Lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <!--Number-->
+            <div class="options">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <!--Symbol-->
+            <div class="options">
+                <label for="symbols">Include Symbol</label>
+                <input type="checkbox" id="symbols">
+            </div>
+
+        </div>
+
+        <!--Button AREA-->
+        <div class="btn-area">
+            <button id="generate-btn"><i class="fa-solid fa-key"></i>Generate Password</button>
+        </div>
+        <div class="strength">
+            <p>Password Strength <span id="strength-label">Medium</span></p>
+            <div class="strength-meter">
+                <div class="strength-bar"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
