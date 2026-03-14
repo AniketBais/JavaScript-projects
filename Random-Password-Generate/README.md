@@ -63,6 +63,8 @@ Based on the score, the password is classified as:
 - 🟢 **Strong**
 
 ---
+
+
 ## 👨‍💻 Author
 
 **Aniket Bais**
