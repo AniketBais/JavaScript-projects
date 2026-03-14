@@ -63,7 +63,13 @@ Based on the score, the password is classified as:
 - 🟢 **Strong**
 
 ---
+## 📸 Preview
 
+![Random Password Generator Preview](images/preview.png)
+
+Generate strong and secure passwords instantly with a clean UI and strength indicator.
+
+---
 
 ## 👨‍💻 Author
 
