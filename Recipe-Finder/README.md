@@ -40,12 +40,17 @@ A simple and beautiful web app to search and explore delicious recipes from arou
 ---
 
 ## 📂 Project Structure
-project/
-│── index.html
-│── style.css
-│── javascript.js
-│── favicon.png
-│── README.md
+<ul>
+  <li>project/
+    <ul>
+      <li>index.html</li>
+      <li>style.css</li>
+      <li>javascript.js</li>
+      <li>favicon.png</li>
+      <li>README.md</li>
+    </ul>
+  </li>
+</ul>
 
 
 ---
@@ -64,12 +69,15 @@ project/
 
 ---
 
-## ▶️ Getting Started
+## 🚀 How to Run
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/recipe-finder.git
-Open index.html in your browser
+git clone https://github.com/AniketBais/recipe-finder.git
+```
+
+Open `index.html` in your browser.
+
+---
 
 <p align="center">
   <b>👨‍💻 Aniket Bais</b><br>
